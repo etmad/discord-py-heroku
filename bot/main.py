@@ -1,17 +1,22 @@
 import os
-import discord
+from discord.ext import commands
 
+bot = commands.Bot(command_prefix="")
 TOKEN = os.getenv("DISCORD_TOKEN")
 
-class MyClient(discord.Client):
-    async def on_message(self, message):
-        print(f"MSG FROM as {message.author.name})")
-        if message.author.name == "AreYouReady":
-            print("CXC")
+@bot.event
+async def on_ready():
+    print(f"Logged in as {bot.user.name}({bot.user.id})")
 
-    async def on_ready():
-        print(f"Logged in as {self.user.name}({self.user.id})")
+@bot.listen()
+async def on_message(message):
+    print(f"Message from in as {message.author.name}({message.content})")
+    if message.user.name == "AreYouReady"
+        print('CXC')
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send("pong")
 
 if __name__ == "__main__":
-    client = MyClient()
-    MyClient.run(TOKEN)
+    bot.run(TOKEN)
