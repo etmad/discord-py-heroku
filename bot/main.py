@@ -11,7 +11,7 @@ async def on_ready():
 @bot.listen()
 async def on_message(message):
     print(f"Message from in as {message.author.name}({message.content})")
-    if message.user.name == "AreYouReady"
+    if message.user.name == "AreYouReady":
         print('CXC')
 
 @bot.command()
