@@ -11,7 +11,7 @@ async def on_ready():
 @bot.listen()
 async def on_message(message):
     print(f"Message from in as {message.author.name}({message.content})")
-    if message.author.name == "AreYouReady" or message.author.name == "GrigorySkovoroda":
+    if message.author.name == "AreYouReady": # or message.author.name == "GrigorySkovoroda":
         await message.channel.send("<@!157838470859980800> <:sosiblue:790956233472737290>")
 
 @bot.command()
