@@ -11,8 +11,8 @@ async def on_ready():
 @bot.listen()
 async def on_message(message):
     print(f"Message from in as {message.author.name}({message.content})")
-    if message.author.name == "AreYouReady":
-        print('CXC')
+    if message.author.name == "AreYouReady" or message.author.name == "GrigorySkovoroda":
+        print(f"@{message.author.name} :sosiblue:")
 
 @bot.command()
 async def ping(ctx):
