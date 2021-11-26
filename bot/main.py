@@ -12,7 +12,7 @@ async def on_ready():
 async def on_message(message):
     print(f"Message from in as {message.author.name}({message.content})")
     if message.author.name == "AreYouReady" or message.author.name == "GrigorySkovoroda":
-        await message.channel.send(f"@{message.author.name} :sosiblue:")
+        await message.channel.send("<@!157838470859980800> <:sosiblue:790956233472737290>")
 
 @bot.command()
 async def ping(ctx):
